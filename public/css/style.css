@@ -1,0 +1,9 @@
+.navbar-brand img{
+	height: 30%;
+	width: 35%;
+	opacity: 0.8;
+}
+
+.navbar-brand img:hover{
+	opacity: 1;
+}

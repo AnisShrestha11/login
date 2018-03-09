@@ -29,5 +29,13 @@
   },
   "devDependencies": {
     "nodemon": "^1.17.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnisShrestha11/login.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnisShrestha11/login/issues"
+  },
+  "homepage": "https://github.com/AnisShrestha11/login#readme"
 }

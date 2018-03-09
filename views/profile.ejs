@@ -14,6 +14,8 @@
 	<!-- Bootstrap core CSS     -->
 	<link href="/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="/css/paper-kit.css?v=2.1.0" rel="stylesheet"/>
+    <link href="/css/style.css" rel="stylesheet">
+
 
     <!--     Fonts and icons     -->
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
@@ -30,15 +32,15 @@
                     <span class="navbar-toggler-bar"></span>
                     <span class="navbar-toggler-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="/img/logo.png" height="30%" Width="35%"></a>
+                <a class="navbar-brand" href="#"><img src="/img/logo.png"></a>
             </div>
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="#TrainYouMust" class="nav-link"><i class="nc-icon nc-layout-11"></i>Yoda</a>
+                        <a href="/" class="nav-link"><i class="nc-icon nc-layout-11"></i>Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#TheDarkSide" class="nav-link"><i class="nc-icon nc-book-bookmark"></i> Darth Vader</a>
+                        <a href="/users/logout" class="nav-link"><i class="nc-icon nc-book-bookmark"></i>Logout</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com" target="_blank">
@@ -59,7 +61,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://github.com/AnisShrestha11/express1" target="_blank">
+                        <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://github.com/AnisShrestha11/login" target="_blank">
                             <i class="fa fa-github"></i>
                             <p class="d-lg-none">GitHub</p>
                         </a>
@@ -110,17 +112,19 @@
                         <div class="row">
                             <div class="col-md-6 ml-auto mr-auto">
                                 <ul class="list-unstyled follows">
+                                    <% for(var i=0; i<users.length; i++) {%>
                                     <li>
-                                        <div class="row">
+                                        <div class="row">   
                                             <div class="col-md-2 col-sm-2 ml-auto mr-auto">
                                                 <img src="/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                                             </div>
                                             <div class="col-md-7 col-sm-4  ml-auto mr-auto">
-                                                <h6>Flume<br/><small>Musical Producer</small></h6>
-                                            </div>
+                                                <h6><%= users[i].username %><br/><small><%= users[i].email %></small></h6>
+                                            </div>                                           
                                             <div class="col-md-3 col-sm-2  ml-auto mr-auto">
 												<div class="form-check">
 					                                <label class="form-check-label">
+                                                        
 					                                    <input class="form-check-input" type="checkbox" value="" checked>
 					                                    <span class="form-check-sign"></span>
 					                                </label>
@@ -129,6 +133,7 @@
                                         </div>
                                     </li>
                                     <hr/>
+                                    <% } %>                                    
                                     <li>
                                         <div class="row">
                                             <div class="col-md-2 ml-auto mr-auto ">

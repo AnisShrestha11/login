@@ -73,6 +73,14 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.get('/users/profile', (req, res) => {
+  db.collection('users').find().toArray((err, result) => {
+    if (err) return console.log(err)
+    
+    res.render('profile.ejs', {users : result})
+  })
+})
+
 app.use('/', routes);
 app.use('/users', users);
 
