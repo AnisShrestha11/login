@@ -73,7 +73,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get('/users/profile', (req, res) => {
+app.get('/users/profile',function (req, res) {
   db.collection('users').find().toArray((err, result) => {
     if (err) return console.log(err)
     
