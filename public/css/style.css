@@ -7,3 +7,28 @@
 .navbar-brand img:hover{
 	opacity: 1;
 }
+
+.card-register {
+    background-color: rgba(0, 0, 0, 0.4) !important;
+	border:1px solid white;
+}
+
+.btn-danger1 {
+    background-color: rgba(1, 1, 1, 0.6);
+    border-color: #ffffff;
+    color: #FFFFFF;
+}
+
+.btn-danger1:hover {
+    background-color: #ffd700!important;
+    border-color: #000000;
+    color: #000000;
+}
+
+.btn-danger.btn-link {
+    color: #ffd700!important;
+}
+
+.card-register .title {
+    color: #ffd700!important;
+}
